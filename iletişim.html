@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stil.css">
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="javaScript/jquery-3.6.0.js"></script>
+    <script src="javaScript.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $("#gönder").click(function(){
+                alert("İsim: " + $("#name").val()+" Email: "+$("#email").val()+" Telefon: "+$("#telefon").val()+" Şehir: "+$("#city").val()+" Mesaj: "+$("#mesaj").val());
+            });
+        });
+
+
+    </script>
+
+</head>
+<body class="bg-secondary">
+
+    <div class="navbar ">
+        <nav class="navbar navbar-dark bg-dark w-100 navbar-expand-sm p-3"  style="margin-top: -8px;">
+            <a class="navbar-brand " href="index.html">
+                <img src="resimler/logo.png" alt="" width="30" height="30">
+                Demir
+            </a>     
+            <div class="container nav justify-content-end">
+                    <ul class="navbar-nav  pagination">
+                        <li class="nav-item page-item"><a href="index.html" class="btn btn-outline-secondary text-white btn-md ms-1">Anasayfa</a></li>
+                        <li class="nav-item page-item"><a href="hakkımda.html"  class="btn btn-outline-secondary text-white btn-md ms-1">Hakkımda</a></li>
+                        <li class="nav-item page-item"><a href="iletişim.html"  class="btn btn-outline-secondary text-white btn-md ms-1  active">İletişim</a></li>
+                        <li class="nav-item page-item"><a href="portfilo.html"  class="btn btn-outline-secondary text-white btn-md ms-1">Portfilo</a></li>
+                      
+
+                    </ul>
+
+
+
+                </div>
+
+        </nav>
+    </div>
+
+    <div id="iletişim" class="text-center my-3">
+        <h1 class="text-warning">İLETİŞİM</h1>
+
+     <div id="demo" class="p-3 text-white display-5">
+
+        <h2 class="text-info display-1">Adres:</h2>
+        <p>İnönü Üniversitesi Mühendislik Fakültesi <br>
+            Battalgazi/Malatya
+    
+        </p>
+    
+        <h2 class="text-info display-1">Telefon</h2>
+        <p>05555555555</p>
+    
+        <h2 class="text-info display-1">Email:</h2>
+        <p>21@gmail.com</p>
+        </div>
+
+
+        <h1 class="text-warning">Bana Ulaşın</h1>
+
+        
+        <form class="w-25 position-absolute  start-50 translate-middle-x p-3 " action="">
+
+            <div class="form-group ">
+                <label class="" for="name">Ad</label>
+                <input type="text" id="name" class="form-control" placeholder="isminizi giriniz">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="email giriniz">
+                
+            </div>
+        
+            <div class="form-group">
+                <label for="number">Telefon Numarası</label>
+                <input type="number" id="telefon" class="form-control" placeholder="Telefon numarası">
+            </div>
+        
+            <div class="form-group">
+                <label for="city">Şehir</label>
+                <select name="city" id="city" class="form-control">
+                    <option value="İstanbul">İstanbul</option>
+                    <option value="Ankara">Ankara</option>
+                    <option value="İzmir">İzmir</option>
+                    <option value="Malatya">Malatya</option>
+                    
+        
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <label for="message">Mesaj Yazın:</label>
+                <textarea name="message" id="mesaj" rows="5" class="form-control"></textarea>
+            </div>
+
+            <div class="p-3 m-3">
+                <button id="gönder" type="button" class="btn btn-primary p-2">Gönder</button>
+                <button id="temizle" type="button" class="btn btn-primary">Temizle</button>
+            </div>
+
+
+
+
+        
+</div>
+
+
+ <div class="bg-dark w-100 h-25">
+
+ </div>
+
+
+</body>
+
+</html>

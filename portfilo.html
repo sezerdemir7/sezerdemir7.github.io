@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stil.css">
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="javaScript/jquery-3.6.0.js"></script>
+    <script src="javaScript.js"></script>
+    
+    
+ 
+
+
+</head>
+<body class="bg-secondary">
+
+    <div class="navbar ">
+        <nav class="navbar navbar-dark bg-dark w-100 navbar-expand-sm p-3"  style="margin-top: -8px;">
+                
+            <div class="container nav justify-content-end">
+                    <ul class="navbar-nav pagination">
+                        <li class="nav-item page-item"><a href="index.html" class="btn btn-outline-secondary text-white btn-md ms-1">Anasayfa</a></li>
+                        <li class="nav-item page-item"><a href="hakkımda.html"  class="btn btn-outline-secondary text-white btn-md ms-1">Hakkımda</a></li>
+                        <li class="nav-item page-item"><a href="iletişim.html"  class="btn btn-outline-secondary text-white btn-md ms-1">İletişim</a></li>
+                        <li class="nav-item page-item"><a href="portfilo.html"  class="btn btn-outline-secondary text-white btn-md ms-1  active">Portfilo</a></li>
+                      
+                    </ul>
+
+
+
+                </div>
+
+        </nav>
+    </div>
+
+    
+
+<table class="table text-white">
+
+    <tr>
+        <th>Proje Adı</th>
+
+        <th> Proje İçeriği</th>
+    </tr>
+
+    <tr>
+        <td id="b1"></td>
+        <td id="b2"></td>
+        
+    </tr>
+    <tr>
+        <td id="b3"></td>
+        <td id="b4"></td>
+        
+    </tr>
+
+
+</table>
+
+
+
+
+<div class="text-center text-white p-5 " style="font-size: 20px;">
+
+    <div id="d1">
+      
+        
+    </div>
+
+    <div id="d2"></div>
+
+    <div id="d3">
+
+    </div>
+
+    <div id="d4">
+
+    </div>
+    
+
+    <a href="CV1.pdf"  download="">
+        <button type="button" class="btn btn-info">CV indir</button>
+    </a>
+
+
+
+   
+
+</div>
+
+
+
+    <script>
+      
+        var blg={
+    
+            "ad":"Sezer",
+            "bölüm":"yazlım mühendisliği",
+            "telefon":"12345567",
+            "email":"dmr@gmail.com"
+    
+    
+        }
+    
+        var jsonVeri=JSON.stringify(blg);
+        var veri=JSON.parse(jsonVeri);
+        document.getElementById("d1").innerHTML=veri.ad;
+        document.getElementById("d2").innerHTML=veri.bölüm;
+        document.getElementById("d3").innerHTML=veri.telefon;
+        document.getElementById("d4").innerHTML=veri.email;
+    
+
+
+    var prj={
+    
+    "ad1":"Sayı Toplama",
+    "içerik":"C programlama kullanarak girilen iki sayının toplamanı bulan program",
+    "ad2":"sayı  çarpma",
+    "içerik2":"C programlama kullanarak girilen iki sayının carpımını bulan program",
+
+}
+
+var jsonVeri2=JSON.stringify(prj);
+var veri2=JSON.parse(jsonVeri2);
+document.getElementById("b1").innerHTML=veri2.ad1;
+document.getElementById("b2").innerHTML=veri2.içerik;
+document.getElementById("b3").innerHTML=veri2.ad2;
+document.getElementById("b4").innerHTML=veri2.içerik2;
+
+
+function indir(){
+
+    let dmr=[
+        {name: "Sezer",SoyAd:"demir"},
+        {name: "Sezsser",SoyAd:"demissr"},
+
+
+
+
+    ]
+
+    var doc = new jsPDF();
+
+    dmr.forEach(function(dmr,i){
+
+        doc.text(50,10+i*10,"Name: "+ dmr.name+"SoyAd:"+dmr.SoyAd+"\n")
+
+    });
+
+    doc.save("output.pdf")
+
+
+    }
+    
+        </script>
+
+
+
+
+</body>
+
+</html>

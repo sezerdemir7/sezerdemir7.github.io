@@ -1,0 +1,32 @@
+#demo img{
+    max-width: 1000px;
+    max-height: 500px;
+    padding-top: 10px;
+            
+         
+}
+
+#demo{
+    position: relative;
+    margin: auto;
+}
+
+
+    th{ 
+        color:#fff;
+            }
+
+
+ 
+            .footer {
+                
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+                margin-top: 5px;
+                height: 30px;
+             }
+          
